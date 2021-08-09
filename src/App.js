@@ -1,11 +1,14 @@
+import { BrowserRouter, Route } from "react-router-dom";
+import User from "./users/pages/User";
 
-import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Let get Start</h1>
-    </div>
+    <BrowserRouter >
+        <Route path='/'>
+            <User />
+        </Route>
+    </BrowserRouter>
   );
 }
 
