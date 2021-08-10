@@ -6,12 +6,12 @@ const User = () => {
       {
         id:'u1',
         name:'Siddhant Gupta',
-        img:'https://image.flaticon.com/icons/png/512/21/21104.png',
+        img:'https://storage.googleapis.com/ares-profile-pictures/hd/cbum-d6362e03169602dffba764db5b271f28_hd.jpg',
     }
   ];
   return (
   <>
-  <h2>User data</h2>
+
   <UserList data={USERS} />
   </>
   );
