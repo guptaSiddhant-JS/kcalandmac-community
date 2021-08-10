@@ -1,8 +1,13 @@
 
-const Useritems = () => {
+const Useritems = props => {
   return (
     <div>
-      <h1>Useritems</h1>
+      <li>
+          <div>
+              <img src={props.img} alt={props.name} />
+              <h2>{props.name}</h2>
+          </div> 
+      </li>
     </div>
   );
 }
