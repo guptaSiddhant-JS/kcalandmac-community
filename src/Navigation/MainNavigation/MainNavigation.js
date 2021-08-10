@@ -19,12 +19,13 @@ const MainNavigation = props =>{
     return (
     <>
     {drawerIsOpen && <Backdrop  onClick={closeTheDrawer} />}
-    {drawerIsOpen && 
-    <SideDrawer>
+
+    <SideDrawer show={drawerIsOpen} onClick={closeTheDrawer}>
          <nav className='main-navigation__drawer-nav '>
            <NavLinks />
          </nav>
-    </SideDrawer>}
+    </SideDrawer>
+
     <MainHeader >
         <button className='main-navigation__menu-btn' onClick={openTheDrawer}>
             <span />
