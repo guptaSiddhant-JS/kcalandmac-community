@@ -1,6 +1,7 @@
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import MainNavigation from "./Navigation/MainNavigation/MainNavigation";
 import User from "./users/pages/User";
+import UserWorkout from "./workout/pages/UserWorkout/UserWorkout";
 
 
 const App = () => {
@@ -9,9 +10,15 @@ const App = () => {
     <BrowserRouter >
     <MainNavigation />
       <main>
-        <Route path='/'>
+      <Switch>
+        <Route path='/' exact>
             <User />
         </Route>
+        <Route path='/:userId/profile' exact>
+            <UserWorkout />
+        </Route>
+        <Redirect to='/'/>
+      </Switch>
       </main>
     </BrowserRouter>
   );
