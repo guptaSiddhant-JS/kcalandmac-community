@@ -1,4 +1,5 @@
 import Card from '../../../shared/Uielements/Card/Card'
+import Button from '../../../shared/components/FormElements/Button/Button'
 import './WorkoutItems.css'
 const WorkoutItems = props =>{
   return <>
@@ -12,8 +13,8 @@ const WorkoutItems = props =>{
               <h3>{props.plan}</h3>
           </div>
           <div className='workout-item__actions'>
-              <button>Edit</button>
-              <button>Delete</button>
+              <Button inverse >Edit</Button>
+              <Button danger>Delete</Button>
           </div>
       </Card> 
 
