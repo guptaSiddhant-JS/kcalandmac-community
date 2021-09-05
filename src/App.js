@@ -1,6 +1,7 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import MainNavigation from "./Navigation/MainNavigation/MainNavigation";
 import User from "./users/pages/User";
+import NewWorkout from "./workout/pages/NewWorkout/NewWorkout";
 import UserWorkout from "./workout/pages/UserWorkout/UserWorkout";
 
 
@@ -16,6 +17,9 @@ const App = () => {
         </Route>
         <Route path='/:userId/profile' exact>
             <UserWorkout />
+        </Route>
+        <Route path='/workout/new' exact>
+            <NewWorkout />
         </Route>
         <Redirect to='/'/>
       </Switch>
