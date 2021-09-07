@@ -48,9 +48,21 @@ const NewWorkout = props =>{
     inputId:id
   });
   } , []);
-  
+  const workoutSubmitHandler = event =>{
+    event.preventDefault();
+    console.log(formState.inputs); //send this to back end
+  }
   return (
-      <form className='workout-form'>
+      <form className='workout-form' onSubmit={workoutSubmitHandler}>
+          <Input 
+            id='date'
+            element='input' 
+            type='text' 
+            label='Date'
+            validators={[VALIDATOR_REQUIRE()]}
+            errorText='Please enter a valid title'
+            onInput={inputHandler} />
+
           <Input 
             id='title'
             element='input' 
