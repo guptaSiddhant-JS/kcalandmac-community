@@ -13,7 +13,7 @@ const WorkoutItems = props =>{
               <h3>{props.plan}</h3>
           </div>
           <div className='workout-item__actions'>
-              <Button inverse >Edit</Button>
+              <Button to={`/workout/${props.id}`} inverse >Edit</Button>
               <Button danger>Delete</Button>
           </div>
       </Card> 
